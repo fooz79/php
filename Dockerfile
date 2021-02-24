@@ -1,6 +1,7 @@
 FROM fooz79/alpine-runtime:3.13
 
 RUN apk add --no-cache \
+    composer \
     php7-bcmath \
     php7-bz2 \
     php7-calendar \
@@ -14,6 +15,7 @@ RUN apk add --no-cache \
     php7-gd \
     php7-iconv \
     php7-imap \
+    php7-intl \
     php7-json \
     php7-ldap \
     php7-mbstring \
@@ -27,6 +29,7 @@ RUN apk add --no-cache \
     php7-pear \
     php7-pecl-amqp \
     php7-pecl-event \
+    php7-pecl-gmagick \
     php7-pecl-lzf \
     php7-pecl-mcrypt \
     php7-pecl-mongodb \
@@ -34,6 +37,7 @@ RUN apk add --no-cache \
     php7-pecl-psr \
     php7-pecl-redis \
     php7-pecl-uuid \
+    php7-pecl-yaml \
     php7-session \
     php7-shmop \
     php7-simplexml \
@@ -51,7 +55,6 @@ RUN apk add --no-cache \
     php7-xmlreader \
     php7-xmlwriter \
     php7-zip \
-    composer \
     # php-fpm7
     && rc-update add php-fpm7
 
