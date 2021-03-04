@@ -3,6 +3,7 @@ FROM fooz79/alpine-runtime:3.13
 RUN apk add --no-cache \
     composer \
     php7-bcmath \
+    php7-brotli \
     php7-bz2 \
     php7-calendar \
     php7-ctype \
@@ -28,7 +29,6 @@ RUN apk add --no-cache \
     php7-pear \
     php7-pecl-amqp \
     php7-pecl-event \
-    php7-pecl-gmagick \
     php7-pecl-lzf \
     php7-pecl-mcrypt \
     php7-pecl-mongodb \
