@@ -1,4 +1,4 @@
-FROM fooz79/alpine-runtime:3.13
+FROM fooz79/alpine-runtime:3.15
 
 RUN apk add --no-cache \
     composer \
