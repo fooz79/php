@@ -1,7 +1,6 @@
 FROM fooz79/alpine-runtime:3.15
 
 RUN apk add --no-cache \
-    composer \
     php7-bcmath \
     php7-brotli \
     php7-bz2 \
@@ -28,19 +27,20 @@ RUN apk add --no-cache \
     php7-pdo_mysql \
     php7-pear \
     php7-pecl-amqp \
-    php7-pecl-imagick \
     php7-pecl-apcu \
     php7-pecl-event \
+    php7-pecl-igbinary \
+    php7-pecl-imagick \
     php7-pecl-lzf \
     php7-pecl-mcrypt \
     php7-pecl-mongodb \
     php7-pecl-msgpack \
-    php7-pecl-igbinary \
     php7-pecl-protobuf \
     php7-pecl-psr \
     php7-pecl-redis \
     php7-pecl-uuid \
     php7-pecl-yaml \
+    php7-phar \
     php7-session \
     php7-shmop \
     php7-simplexml \
@@ -58,7 +58,10 @@ RUN apk add --no-cache \
     php7-xmlwriter \
     php7-zip \
     # php-fpm7
-    && rc-update add php-fpm7
+    && rc-update add php-fpm7 \
+    # composer
+    && curl https://getcomposer.org/download/2.2.6/composer.phar --output /usr/bin/composer \
+    && chmod +x /usr/bin/composer
 
 EXPOSE 9000
 
