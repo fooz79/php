@@ -28,11 +28,15 @@ RUN apk add --no-cache \
     php7-pdo_mysql \
     php7-pear \
     php7-pecl-amqp \
+    php7-pecl-imagick \
+    php7-pecl-apcu \
     php7-pecl-event \
     php7-pecl-lzf \
     php7-pecl-mcrypt \
     php7-pecl-mongodb \
     php7-pecl-msgpack \
+    php7-pecl-igbinary \
+    php7-pecl-protobuf \
     php7-pecl-psr \
     php7-pecl-redis \
     php7-pecl-uuid \
@@ -44,7 +48,6 @@ RUN apk add --no-cache \
     php7-soap \
     php7-sockets \
     php7-sodium \
-    php7-static \
     php7-sysvmsg \
     php7-sysvsem \
     php7-sysvshm \
